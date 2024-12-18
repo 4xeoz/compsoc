@@ -3,23 +3,24 @@
 @tailwind utilities;
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
 p {
   font-size: 1rem;
 }
+
 
 @layer base {
   :root {
@@ -48,6 +49,7 @@ p {
     --chart-4: #6bcf42;
     --chart-5: #ffb733;
     --radius: 0.5rem;
+    
   }
 
 }
@@ -55,6 +57,7 @@ p {
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Ubuntu', sans-serif;
   }
   body {
     @apply bg-background text-foreground;

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-import { Poppins } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const ubuntu = Ubuntu({
+  variable: "--font-ubuntu",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${ubuntu.variable} antialiased`}>
         {children}
       </body>
     </html>
