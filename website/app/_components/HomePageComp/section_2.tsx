@@ -31,7 +31,7 @@ const section_2 = () => {
             <p className='my-5'>We run academic and social events on a monthly basis for coders and non-coders alike, as well as bigger events throughout the year. You can learn to code or participate in beginner, intermediate or advanced game jams (game building competitions), hackathons and more.</p>
         </div>
 
-        <div className='flex justify-around rounded-sm max-w-lg bg-gradient-to-br from-blue-600 to-violet-600 h-32 mx-auto'>
+        <div className='flex justify-around rounded-sm max-w-lg bg-gradient-to-br from-[var(--Gradient-1)] to-[var(--Gradient-2)] h-32 mx-auto'>
        
             <div className='my-auto flex items-center'>
                 <span className='bg-foreground h-16 w-1 rounded-full mr-4'/>

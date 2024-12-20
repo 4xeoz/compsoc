@@ -2,6 +2,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Carousel from "./Carousel";
+import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import {EventData} from "@/lib/data";
 
 const section_3 = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,14 +21,9 @@ const section_3 = () => {
   }, []);
 
   if (isMobile) {
-    const pastEvents = EventData.filter(
-      (event) => new Date(event.date) < new Date()
-    );
-    const latestPastEvent =
-      pastEvents.length > 0 ? pastEvents[pastEvents.length - 1] : null;
-    const upcomingEvents = EventData.filter(
-      (event) => new Date(event.date) >= new Date()
-    );
+    const pastEvents = EventData.filter((event) => new Date(event.date) < new Date());
+    const latestPastEvent = pastEvents.length > 0 ? pastEvents[pastEvents.length - 1] : null;
+    const upcomingEvents = EventData.filter((event) => new Date(event.date) >= new Date());
 
     if (latestPastEvent) {
       return (
@@ -80,6 +78,13 @@ const section_3 = () => {
                 </Carousel>
               </div>
             </div>
+            <div className="flex justify-center mt-4">
+                <Link href="/events">
+                    <Button variant="link">
+                        <h3>More Events</h3>
+                    </Button>
+                </Link>
+            </div>
           </div>
         </div>
       );
@@ -102,63 +107,3 @@ const section_3 = () => {
 
 export default section_3;
 
-// interface EventCardProps {
-//     title: string;
-//     date: string;
-//     description: string;
-// }
-
-// const EventCard: React.FC<EventCardProps> = ({ title, date, description }) => {
-//     return (
-//         <div className="event-card">
-//             <h3 className="event-card__title">{title}</h3>
-//             <p className="event-card__date">{date}</p>
-//             <p className="event-card__description">{description}</p>
-//         </div>
-//     );
-// };
-
-const EventData = [
-  {
-    title: "Event 1",
-    description: "Description for event 1",
-    date: "2023-10-01",
-    picture: "https://via.placeholder.com/650/350",
-  },
-  {
-    title: "Event 2",
-    description: "Description for event 2",
-    date: "2023-10-02",
-    picture: "https://picsum.photos/seed/1/800/800",
-  },
-  {
-    title: "Event 3",
-    description: "Description for event 3",
-    date: "2023-10-03",
-    picture: "https://picsum.photos/seed/2/800/800",
-  },
-  {
-    title: "Event 4",
-    description: "Description for event 4",
-    date: "2025-10-04",
-    picture: "https://picsum.photos/seed/3/800/800",
-  },
-  {
-    title: "Event 5",
-    description: "Description for event 5",
-    date: "2025-10-05",
-    picture: "https://picsum.photos/seed/4/800/800",
-  },
-  {
-    title: "Event 6",
-    description: "Description for event 6",
-    date: "2025-10-06",
-    picture: "https://picsum.photos/seed/5/800/800",
-  },
-  {
-    title: "Event 7",
-    description: "Description for event 7",
-    date: "2023-10-07",
-    picture: "https://picsum.photos/seed/6/800/800",
-  },
-];
