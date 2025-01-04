@@ -12,7 +12,7 @@ const section_1 = () => {
                 <img src="/logo_opacity_50.png" alt="CompSoc Logo" className="w-fit h-fit object-contain" />
             </div>
             <div className="text-center relative z-10 flex flex-col items-center gap-5 mt-20">
-                <h1 className='bg-gradient-to-br from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent'>CompSoc</h1>
+                <h1 className='bg-gradient-to-br from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent headerText'>CompSoc</h1>
                 <h3 className=''>University of Surrey's Technology society</h3>
                 <div className='p-5'>
                     <IoArrowDownCircleSharp size={28} />

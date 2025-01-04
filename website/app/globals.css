@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
+  font-weight: bold; 
+}
+
+.headerText{
+  font-size: 4.5rem;
   font-weight: bold;
+  
 }
 
 h2 {
@@ -25,6 +31,11 @@ h4 {
 p {
   font-size: 1rem;
   font-weight: bold;
+  color: var(--secondary-foreground);
+}
+
+hr {
+  border: 0.5px solid var(--secondary-foreground);
 }
 
 
@@ -36,17 +47,14 @@ p {
     --card-foreground: #1a1a1a;
     --popover: #ffffff;
     --popover-foreground: #1a1a1a;
-    --primary: #1a1a1a;
-    --primary-foreground: #fafafa;
-    --secondary: #f2f2f2;
-    --secondary-foreground: #1a1a1a;
+    --secondary-foreground: #c9bed2;
     --muted: #f2f2f2;
     --muted-foreground: #767676;
     --accent: #f2f2f2;
     --accent-foreground: #1a1a1a;
     --destructive: #e60000;
     --destructive-foreground: #fafafa;
-    --border: #e6e6e6;
+    --border: #4b2d71;
     --input: #e6e6e6;
     --ring: #1a1a1a;
     --chart-1: #ff5733;

@@ -8,7 +8,7 @@ import Background from '../_components/HomePageComp/Background'
 
 const HomePage = () => {
   return (
-    <div className='max-w-4xl mx-auto'>
+    <div className='max-w-5xl mx-auto flex-col flex gap-32'>
       <Background />
       <Section1 />
       <Section2 />

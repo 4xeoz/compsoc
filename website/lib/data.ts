@@ -1,49 +1,70 @@
-export const EventData = [
-    {
-      title: "Event 1",
-      description: "Description for event 1",
-      date: "2023-10-01",
-      picture: "https://via.placeholder.com/650",
-    },
-    {
-      title: "Event 2",
-      description: "Description for event 2",
-      date: "2023-10-02",
-      picture: "https://picsum.photos/seed/1/800/800",
-    },
-    {
-      title: "Event 3",
-      description: "Description for event 3",
-      date: "2023-10-03",
-      picture: "https://picsum.photos/seed/2/800/800",
-    },
-    {
-      title: "Event 4",
-      description: "Description for event 4",
-      date: "2025-10-04",
-      picture: "https://picsum.photos/seed/3/800/800",
-    },
-    {
-      title: "Event 5",
-      description: "Description for event 5",
-      date: "2025-10-05",
-      picture: "https://picsum.photos/seed/4/800/800",
-    },
-    {
-      title: "Event 6",
-      description: "Description for event 6",
-      date: "2025-10-06",
-      picture: "https://picsum.photos/seed/5/800/800",
-    },
-    {
-      title: "Event 7",
-      description: "Description for event 7",
-      date: "2023-10-07",
-      picture: "https://picsum.photos/seed/6/800/800",
-    },
-  ];
+export interface EventDataSchem {
+    EventName: string;
+    EventPicture: string;
+    EventDescription: string;
+    EventDate: string;
+    EventStartTime: string;
+    EventLocation: string;
+    EventEndTime: string;
+}
 
-  
+export const EventData: EventDataSchem[] = [
+    {
+        EventName: "Tech Conference 2023",
+        EventPicture: "https://picsum.photos/800/600?random=1",
+        EventDescription: "Join us for the latest in technology. This event will feature keynote speeches, panel discussions, and networking opportunities with professionals from various tech indust.",
+        EventDate: "2025-10-01",
+        EventStartTime: "10:00 AM",
+        EventLocation: "EAP",
+        EventEndTime: "12:00 PM",
+    },
+    {
+        EventName: "AI & Machine Learning Summit",
+        EventPicture: "https://picsum.photos/800/600?random=2",
+        EventDescription: "Explore the advancements in AI and Machine Learning with experts from around the world. This summit will cover a wi",
+        EventDate: "2023-10-02",
+        EventStartTime: "11:00 AM",
+        EventLocation: "Tech Park",
+        EventEndTime: "01:00 PM", 
+    },
+    {
+        EventName: "Startup Pitch Night",
+        EventPicture: "https://picsum.photos/800/600?random=3",
+        EventDescription: "Watch startups pitch their innovative ideas to a panel of investors. This event provides a platform for entrepreneurs to showcase. Attendees will witness a variet",
+        EventDate: "2023-10-03",
+        EventStartTime: "09:00 AM",
+        EventLocation: "Innovation Hub",
+        EventEndTime: "11:00 AM",
+    },
+    {
+        EventName: "Startup Pitch Night",
+        EventPicture: "https://picsum.photos/800/600?random=3",
+        EventDescription: "Watch startups pitch their innovative ideas to a panel of investors. This event provides a platform for entrepreneurs to showcase. Attendees will witness a variet",
+        EventDate: "2023-10-03",
+        EventStartTime: "09:00 AM",
+        EventLocation: "Innovation Hub",
+        EventEndTime: "11:00 AM",
+    },
+    {
+        EventName: "Startup Pitch Night",
+        EventPicture: "https://picsum.photos/800/600?random=3",
+        EventDescription: "Watch startups pitch their innovative ideas to a panel of investors. This event provides a platform for entrepreneurs to showcase. Attendees will witness a variet",
+        EventDate: "2023-10-03",
+        EventStartTime: "09:00 AM",
+        EventLocation: "Innovation Hub",
+        EventEndTime: "11:00 AM",
+    },
+    {
+        EventName: "Startup Pitch Night",
+        EventPicture: "https://picsum.photos/800/600?random=3",
+        EventDescription: "Watch startups pitch their innovative ideas to a panel of investors. This event provides a platform for entrepreneurs to showcase. Attendees will witness a variet",
+        EventDate: "2023-10-03",
+        EventStartTime: "09:00 AM",
+        EventLocation: "Innovation Hub",
+        EventEndTime: "11:00 AM",
+    },
+];
+
 export const OrganisationLogos = [
     "https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png",
     "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
