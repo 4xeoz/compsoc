@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import NumberTicker from "@/components/ui/number-ticker";
-import { useEffect, useState } from "react";
+import { useIsMobile } from "@/lib/hooks";
 
 const section_2 = () => {
     const images = Array.from({ length: 4 }, (_, i) => {
@@ -9,19 +9,8 @@ const section_2 = () => {
         return `https://picsum.photos/seed/${i + 1}/800/800`;
     });
 
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 640);
-        };
-
-        window.addEventListener("resize", handleResize);
-        handleResize();
-
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
+    const isMobile = useIsMobile();
+    
     if (isMobile) {
         return (
             <div className="p-5 relative overflow-hidden h-fit">

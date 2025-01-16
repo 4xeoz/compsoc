@@ -1,25 +1,14 @@
 "use client";
 import React from "react";
-import { useState, useEffect } from "react";
 import Carousel from "./Carousel";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { EventData } from "@/lib/data";
-import { div } from "framer-motion/client";
+import { useIsMobile } from "@/lib/hooks";
 
 const section_3 = () => {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 640);
-        };
-
-        window.addEventListener("resize", handleResize);
-        handleResize();
-
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    
+    const isMobile = useIsMobile();
 
     const pastEvents = EventData.filter(
         (event) => new Date(event.EventDate) < new Date()

@@ -8,8 +8,8 @@ const section_3 = () => {
         <h2>PREVIOUS EVENTS</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {EventData.filter(event => new Date(event.EventDate) < new Date()).slice(0, 4).map((event) => (
-          <PreviousEvents key={event.EventName} events={event} />
+        {EventData.filter(event => new Date(event.EventDate) < new Date()).slice(0, 4).map((event, i) => (
+          <PreviousEvents key={i} events={event} />
         ))}
         </div>
     </div>

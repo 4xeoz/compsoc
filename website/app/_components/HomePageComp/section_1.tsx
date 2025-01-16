@@ -2,8 +2,6 @@ import React from 'react'
 
 import { IoArrowDownCircleSharp } from "react-icons/io5";
 
-
-
 const section_1 = () => {
   return (
     <div className='p-5 h-[80vh] flex items-center justify-center'>
