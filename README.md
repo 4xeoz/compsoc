@@ -1,8 +1,10 @@
 # compsoc
 
 
-### git clone 
+`git clone `
 
-### cd website 
+`cd website` 
 
-### npm run dev
+`npm i`
+
+`npm run dev`
