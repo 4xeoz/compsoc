@@ -30,7 +30,7 @@ const YearSection = ({ year, members }: { year: string; members: TeamDataEntry["
 );
 
 const MemberCard = ({ member }: { member: TeamDataEntry["members"][0] }) => (
-  <div className=" relative rounded-sm bg-gradient-to-br from-[var(--Gradient-1)] to-[var(--Gradient-2)] text-white shadow-lg p-4 flex flex-col items-center space-y-4 my-10">
+  <div className=" relative rounded-sm bg-gradient-to-br from-[var(--Gradient-1)] to-[var(--Gradient-2)] shadow-lg p-4 flex flex-col items-center space-y-4 my-10">
       <img
     src={member.picture} 
     alt={`${member.fullName} profile picture`}

@@ -1,64 +1,109 @@
-'use client';
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
-import { useState } from "react";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: -20, opacity: 0 },
+  visible: { y: 0, opacity: 1 },
+};
 
 const Header = () => {
-    const [openSheet, setOpenSheet] = useState(false);
-
+  const [openSheet, setOpenSheet] = useState(false);
 
   return (
-    <div className=" p-5 max-w-7xl mx-auto">
-      <div className=" flex justify-between">
-        <div>
+    <div className="max-w-5xl mx-auto">
+      {/* Motion container for the entire header row */}
+      <motion.div
+        className="p-5 m-5 flex justify-between items-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Logo as a motion item */}
+        <motion.div variants={itemVariants}>
           <h3>logo</h3>
-        </div>
-        <div className="sm:hidden">
+        </motion.div>
+
+        {/* Mobile Nav (hamburger + drawer) as a motion item */}
+        <motion.div className="sm:hidden" variants={itemVariants}>
           <Sheet open={openSheet} onOpenChange={setOpenSheet}>
             <SheetTrigger>
-                    <HiMenuAlt3 size={36}/>
+              <HiMenuAlt3 size={36} />
             </SheetTrigger>
-            <SheetContent className="p-3 ">
-                <SheetHeader>
-                    <h3>Menu</h3>
-                </SheetHeader>
-                <SheetTitle>
-                <div>
-                    <Link href="/">
-                      <h3 onClick={() => {setOpenSheet(false)}}>Home</h3>
+            <SheetContent className="p-3">
+              <SheetHeader>
+                <h3>Menu</h3>
+              </SheetHeader>
+              <SheetTitle>
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <motion.div variants={itemVariants}>
+                    <Link
+                      href="/"
+                      onClick={() => setOpenSheet(false)}
+                    >
+                      Home
                     </Link>
-                    <Link href="/events">
-                      <h3 onClick={() => {setOpenSheet(false)}}>Events</h3>
+                  </motion.div>
+                  <motion.div variants={itemVariants}>
+                    <Link
+                      href="/events"
+                      onClick={() => setOpenSheet(false)}
+                    >
+                      Events
                     </Link>
-                    <Link href="/members">
-                      <h3 onClick={() => {setOpenSheet(false)}}>Members</h3>
+                  </motion.div>
+                  <motion.div variants={itemVariants}>
+                    <Link
+                      href="/members"
+                      onClick={() => setOpenSheet(false)}
+                    >
+                      Members
                     </Link>
-                </div>
-                </SheetTitle>
+                  </motion.div>
+                </motion.div>
+              </SheetTitle>
             </SheetContent>
           </Sheet>
-        </div>
-    <div className="hidden sm:flex space-x-4">
-      <Link href="/">
-        <h3>Home</h3>
-      </Link>
-      <Link href="/events">
-        <h3>Events</h3>
-      </Link>
-      <Link href="/members">
-        <h3>Members</h3>
-      </Link>
-    </div>
-      </div>
+        </motion.div>
+
+        {/* Desktop Nav as a motion item */}
+        <motion.div
+          className="hidden sm:flex space-x-4"
+          variants={containerVariants}
+        >
+          <motion.div variants={itemVariants}>
+            <Link href="/">Home</Link>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <Link href="/events">Events</Link>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <Link href="/members">Members</Link>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
