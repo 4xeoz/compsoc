@@ -23,9 +23,9 @@ const itemVariants = {
 const section_1 = () => {
   return (
     <motion.div className='p-5 h-[80vh] flex items-center justify-center' variants={containerVariants} initial="hidden" animate="visible">
-        <div className='w-72 h-72 flex flex-col items-center justify-center relative' >
+        <div className=' flex flex-col items-center justify-center relative' >
             <div className="absolute inset-0 flex items-center justify-center">
-            <motion.img src="/logo_opacity_50.png" alt="CompSoc Logo" className="w-fit h-fit object-contain" variants={itemVariants} />
+                <motion.img src="/logo_opacity_50.png" alt="CompSoc Logo" className="w-full h-full object-contain" variants={itemVariants} />
             </div>
             <div className="text-center relative z-10 flex flex-col items-center gap-5 mt-20">
             <motion.h1 className='bg-gradient-to-br from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent headerText' variants={itemVariants}>CompSoc</motion.h1>

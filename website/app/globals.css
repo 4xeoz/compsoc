@@ -7,10 +7,21 @@ h1 {
   font-weight: bold; 
 }
 
-.headerText{
-  font-size: 4.5rem;
+.headerText {
+  font-size: 4rem;
   font-weight: bold;
-  
+}
+
+@media (min-width: 640px) {
+  .headerText {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerText {
+    font-size: 9rem;
+  }
 }
 
 h2 {
@@ -78,5 +89,10 @@ hr {
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
+}
+
+@layer utilities {
+
 }

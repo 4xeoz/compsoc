@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import { SessionProvider } from "next-auth/react";
 import { Ubuntu } from "next/font/google";
 
 const ubuntu = Ubuntu({
@@ -21,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ubuntu.variable} antialiased`}>
-        {children}
+        <SessionProvider>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );
