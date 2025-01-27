@@ -1,6 +1,6 @@
 import React from 'react'
-import Section1 from '@/app/_components/MemeberPageComp/section_1'
-import Section2 from '@/app/_components/MemeberPageComp/section_2'
+import Section1 from '@/components/MemeberPageComp/section_1'
+import Section2 from '@/components/MemeberPageComp/section_2'
 
 
 const MembersPage = () => {

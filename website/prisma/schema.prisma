@@ -6,6 +6,11 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+enum Role {
+  USER
+  ADMIN
+}
  
 model User {
   id            String          @id @default(auto()) @map("_id") @db.ObjectId
@@ -13,6 +18,8 @@ model User {
   email         String?         @unique
   emailVerified DateTime?
   image         String?
+  role          Role            @default(USER)
+
   accounts      Account[]
   sessions      Session[]
   // Optional for WebAuthn support

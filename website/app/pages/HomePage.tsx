@@ -1,10 +1,10 @@
 import React from 'react'
-import Section1 from '../_components/HomePageComp/section_1'
-import Section2 from '../_components/HomePageComp/section_2'
-import Section3 from '../_components/HomePageComp/section_3'
-import Section4 from '../_components/HomePageComp/section_4'
-import Section5 from '../_components/HomePageComp/section_5'
-import Background from '../_components/HomePageComp/Background'
+import Section1 from '../../components/HomePageComp/section_1'
+import Section2 from '../../components/HomePageComp/section_2'
+import Section3 from '../../components/HomePageComp/section_3'
+import Section4 from '../../components/HomePageComp/section_4'
+import Section5 from '../../components/HomePageComp/section_5'
+import Background from '../../components/HomePageComp/Background'
 
 const HomePage = () => {
   return (
