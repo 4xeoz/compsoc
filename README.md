@@ -73,6 +73,7 @@ Ensure you have the following installed on your machine:
 ```
 
 
+---
 
 
 This README was generated with ❤️ by the CompSoc WebMasters Team 2024/2025 .
