@@ -79,25 +79,4 @@ Ensure you have the following installed on your machine:
 This README was generated with ❤️ by the CompSoc WebMasters Team 2024/2025 .
 
 
----
-
-### Notes for Usage:
-
-- **Replace Placeholder Content**: Ensure you replace placeholder links (e.g., `https://github.com/yourusername/compsoc-website.git`, `https://compsoc.example.com`) and contact information with actual data relevant to your project.
-
-- **Images**: Make sure the images referenced (e.g., `public/images/logo.png`, `public/images/homepage.png`) exist in your repository's `public/images` directory. Update the paths if your image structure differs.
-
-- **Environment Variables**: Populate the `.env.local` file with actual credentials and secrets. Never commit sensitive information to your repository.
-
-- **Authentication Providers**: Update `auth.config.js` with the correct providers and ensure all necessary environment variables for authentication (like `GITHUB_ID`, `GITHUB_SECRET`, etc.) are set.
-
-- **Deployment URL**: Update the live demo link to point to your actual deployed site.
-
-- **Contributing Guidelines**: If you have a `CONTRIBUTING.md` file, ensure it contains detailed guidelines for contributors. Similarly, ensure the `LICENSE` file is present and correctly reflects your project's licensing.
-
-- **Custom Middleware**: If there are additional middleware configurations or specific routing logic beyond what's outlined, consider expanding the "Middleware and Routing" section accordingly.
-
-Feel free to customize the README further to better fit the unique aspects of your CompSoc website project.
-
-
 
