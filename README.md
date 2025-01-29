@@ -1,6 +1,6 @@
 # CompSoc Website
 
-![CompSoc Logo](public/images/logo.png)
+![CompSoc Logo](/website/public/images/logo.png)
 
 Welcome to the **CompSoc Website** repository! This project serves as the official website for the Computer Science Society (CompSoc), providing members and visitors with information about events, membership, and more. Built with modern web technologies, the site offers a seamless and secure experience for all users.
 
