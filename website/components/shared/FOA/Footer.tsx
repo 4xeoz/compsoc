@@ -54,8 +54,8 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">Our Sponsors</h3>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <Image src="/students_Union.png" alt="Students' Union" width={150} height={50} className="object-contain" />
-              <Image src="/Huzzle.png" alt="Huzzle" width={150} height={50} className="object-contain" />
+              <Image src="/images/students_Union.png" alt="Students' Union" width={150} height={50} className="object-contain" />
+              <Image src="/images/Huzzle.png" alt="Huzzle" width={150} height={50} className="object-contain" />
             </div>
           </div>
         </div>

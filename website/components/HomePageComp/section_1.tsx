@@ -1,8 +1,6 @@
 'use client';
 import React from 'react'
 import { delay, motion } from "framer-motion";
-
-
 import { IoArrowDownCircleSharp } from "react-icons/io5";
 
 
@@ -25,7 +23,7 @@ const section_1 = () => {
     <motion.div className='p-5 h-[80vh] flex items-center justify-center' variants={containerVariants} initial="hidden" animate="visible">
         <div className='flex flex-col items-center justify-center relative' >
             <div className="absolute inset-0 flex items-center justify-center">
-                <motion.img src="/logo_opacity_50.png" alt="CompSoc Logo" className="w-full h-full object-contain" variants={itemVariants} />
+                <motion.img src="/images/logo_opacity_50.png" alt="CompSoc Logo" className="w-full h-full object-contain" variants={itemVariants} />
             </div>
             <div className="text-center relative z-10 flex flex-col items-center gap-5 mt-20">
             <motion.h1 className='bg-gradient-to-br from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent headerText' variants={itemVariants}>CompSoc</motion.h1>

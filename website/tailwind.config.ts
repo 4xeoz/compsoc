@@ -50,10 +50,20 @@ export default {
   				'4': 'var(--chart-4)',
   				'5': 'var(--chart-5)'
   			},
-			gradient: {
-				'1': 'var(--Gradient-1)',
-				'2': 'var(--Gradient-2)',
-			}
+  			gradient: {
+  				'1': 'var(--Gradient-1)',
+  				'2': 'var(--Gradient-2)'
+  			},
+  			sidebar: {
+  				DEFAULT: 'var(--sidebar-background)',
+  				foreground: 'var(--sidebar-foreground)',
+  				primary: 'hsl(var(--sidebar-primary))',
+  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+  				accent: 'hsl(var(--sidebar-accent))',
+  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+  				border: 'var(--sidebar-border)',
+  				ring: 'hsl(var(--sidebar-ring))'
+  			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

@@ -16,11 +16,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             return token
           },
           session({ session, token }) {
-            session.user.id = token.id as string
-            session.user.role = token.role as string
+            session.user.id = token.id as string;
+            session.user.role = token.role as "ADMIN" | "USER";
 
-            return session
+            return session;
           },
+          
     },
     session: {
         strategy: "jwt",

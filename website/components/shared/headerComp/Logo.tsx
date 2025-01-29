@@ -8,9 +8,13 @@ const itemVariants = {
   visible: { y: 0, opacity: 1 },
 };
 
-const Logo: React.FC = () => (
+interface LogoProps {
+  size?: number;
+}
+
+const Logo: React.FC<LogoProps> = ({ size = 10 }) => (
   <motion.div variants={itemVariants}>
-    <img src="/Full_logo.png" alt="Logo" className="h-10" />
+    <img src="/images/Full_logo.png" alt="Logo" className={`h-${size}`} />
   </motion.div>
 );
 

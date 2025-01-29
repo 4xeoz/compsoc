@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -11,8 +10,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { HiMenuAlt3 } from "react-icons/hi";
-import Logo from "./headerComp/Logo";
-import NavLinks from "./headerComp/NavLinks";
+import Logo from "../headerComp/Logo";
+import NavLinks from "../headerComp/NavLinks";
 const containerVariants = {
   hidden: {},
   visible: {
