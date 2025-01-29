@@ -57,11 +57,13 @@ Ensure you have the following installed on your machine:
 ### Installation
 
    ```bash
-   git clone https://github.com/yourusername/compsoc-website.git
-   cd compsoc-website
+   git clone https://github.com/surreycomsoc/website_v2.git
 
-   git clone https://github.com/yourusername/compsoc-website.git
-   cd compsoc-website
+   or
+
+   git clone https://github.com/4xeoz/compsoc.git
+
+   cd website
 
    npm install
 
