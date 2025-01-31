@@ -55,13 +55,13 @@ hr {
   :root {
     --background: #100431;
     --foreground: #e8e3ec;
-    --card: #ffffff;
-    --card-foreground: #1a1a1a;
+    --card: #2e1960;
+    --card-foreground: #e8e3ec;
     --popover: #ffffff;
     --popover-foreground: #1a1a1a;
     --secondary-foreground: #c9bed2;
     --muted: #f2f2f2;
-    --muted-foreground: #0a021b;
+    --muted-foreground: #bfb1ca;
     --accent: #f2f2f2;
     --accent-foreground: #1a1a1a;
     --destructive: #e60000;

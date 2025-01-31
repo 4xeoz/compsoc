@@ -16,6 +16,7 @@ import {
 import Image from "next/image";
 import Logo from "../headerComp/Logo";
 import { Session } from "next-auth";
+import { main } from '@/prisma/seed';
 
 const items = [
   {
@@ -25,24 +26,20 @@ const items = [
   },
   {
     title: "Add Event",
-    url: "#",
+    url: "/admin/event",
     icon: FaPlusCircle,
+  },
+  {
+    title: "Add Member",
+    url: "/admin/member",
+    icon: FaCalendarAlt,
   },
   {
     title: "Home",
     url: "/",
     icon: FaHome,
   },
-  {
-    title: "Events",
-    url: "/events",
-    icon: FaCalendarAlt,
-  },
-  {
-    title: "Members",
-    url: "/members",
-    icon: FaUsers,
-  }
+
 ];
 
 export function AppSidebar({ session }: { session: Session }) {
@@ -72,6 +69,7 @@ export function AppSidebar({ session }: { session: Session }) {
                 );
               })}
             </SidebarMenu>
+            {/* <button onClick={async () => {await main}} className="bg-foreground text-background p-2 rounded-md mt-5">Seed</button> */}
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>

@@ -18,8 +18,8 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
     <RoleGate AllowedRole={Role.ADMIN}>
       <SidebarProvider open={true}>
         <AppSidebar session={session} />
-        <main className="p-5">
-          <div className="p-5">
+        <main className="p-5 w-full">
+          <div className="p-5 pt-0">
             {children}
           </div>
         </main>

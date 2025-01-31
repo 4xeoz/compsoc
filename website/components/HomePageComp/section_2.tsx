@@ -114,7 +114,7 @@ const containerVariants = {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -126,6 +126,7 @@ const containerVariants = {
       y: 0,
       transition: {
         duration: 0.5,
+        type: "spring",
         ease: "easeOut",
       },
     },

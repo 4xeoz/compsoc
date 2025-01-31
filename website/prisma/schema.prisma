@@ -87,3 +87,25 @@ model Authenticator {
  
   @@unique([userId, credentialID])
 }
+
+model Event {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String?
+  location    String?
+  date        DateTime
+  image       String?  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model member {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  position    String
+  image       String?
+  year        Int
+  website     String?
+  linkedin    String?
+  instagram   String?
+}
