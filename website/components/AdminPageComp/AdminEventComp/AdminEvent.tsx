@@ -1,69 +1,111 @@
-
-import React from 'react'
-import { getAllEvents } from '@/app/actions/Event';
-import { Card, CardContent } from '@/components/ui/card';
-import Image from 'next/image';
-import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa'
-import { Event } from '@prisma/client';
-import {Button} from '@/components/ui/button';
-
+import React from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { Event } from "@prisma/client";
+import { getAllEvents } from "@/app/actions/Event";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const AdminEvent = async () => {
-    const eventData = await getAllEvents();
+  const Data = await getAllEvents();
 
-    return (
-        <div className=" flex flex-col gap-5">
-           <div className="flex justify-between items-center bg-card p-5 rounded-md ">
-                <h2>Events</h2>
-                <Button variant="default"><p>Add Event</p></Button>
-
-           </div>
-           <div className='overflow-y-scroll h-[89vh] '>
-                {eventData.map((event: any, index: number) => (
-                    <EventCard key={index} {...event} />
-                ))}
-           </div>
-
-        </div>
-    );
-}
+  return (
+    <div className=" flex flex-col gap-5">
+      <div className="flex justify-between items-center bg-card p-5 rounded-md ">
+        <h2>Events</h2>
+        <Dialog>
+          <DialogTrigger>
+            <Button asChild variant="default">
+              <p>Add Event</p>
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Are you absolutely sure?</DialogTitle>
+              <DialogDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+      </div>
+      <div className="overflow-y-scroll h-[89vh] ">
+        <EventCard EventData={Data} />
+      </div>
+    </div>
+  );
+};
 
 export default AdminEvent;
 
-function EventCard({ date, title, description, location, image }: Event) {
-    return (
-    <Card className="overflow-hidden rounded-md mb-5">
-      <CardContent className="p-0">
-        <div className="grid grid-cols-5 gap-3 h-40">
-          {/* Image Container */}
-          <div className="relative w-full h-full bg-gray-100 col-span-1">
-            <Image
-              src={image || "/placeholder.svg"}
-              alt={title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 20vw" // Adjust as needed for responsiveness
-            />
-          </div>
-          
-          {/* Content */}
-          <div className="p-3 col-span-4 flex flex-col justify-between">
-            <div>
-              <div className="flex justify-between items-center mb-1">
-                <h3 className="text-sm font-semibold truncate">{title}</h3>
-                <div className="flex items-center text-xs text-muted-foreground">
-                  <FaCalendarAlt className="mr-1 h-3 w-3" />
-                  {new Date(date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-                </div>
-              </div>
-              <div className="flex items-center text-xs text-muted-foreground">
-                <FaMapMarkerAlt className="mr-1 h-3 w-3" />
-                {location}
-              </div>
-            </div>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+function EventCard({ EventData }: { EventData: Event[] }) {
+  return (
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead />
+          <TableHead>Title</TableHead>
+          <TableHead>Location</TableHead>
+          <TableHead>Date</TableHead>
+          <TableHead>Time</TableHead>
+          <TableHead></TableHead>
+          <TableHead />
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {EventData.map((e: Event, index: number) => (
+          <TableRow key={index}>
+            <TableCell>
+              <img
+                src={e.image ?? "/placeholder.svg"}
+                alt={e.title}
+                className="w-28 h-16"
+              />
+            </TableCell>
+            <TableCell>{e.title}</TableCell>
+            <TableCell>{e.location}</TableCell>
+            <TableCell>
+              {e.date.getHours()}:{e.date.getMinutes()}{" "}
+              {e.date.getHours() >= 12 ? "PM" : "AM"}
+            </TableCell>
+            <TableCell>
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <BsThreeDotsVertical />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                  <DropdownMenuItem>Edit</DropdownMenuItem>
+                  <DropdownMenuItem>Delete</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   );
-};
+}
