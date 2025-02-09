@@ -39,7 +39,7 @@ export async function createMember(formData: FormData) {
                 image: imageUrl,
             },
         });
-
+        revalidatePath("/members");
         revalidatePath('/admin/members');
         return { success: "Member added!" };
 
@@ -70,7 +70,7 @@ export async function deleteMember(memberId: string) {
   
       // Delete member from MongoDB
       await prisma.member.delete({ where: { id: memberId } });
-
+      revalidatePath("/members");
       revalidatePath('/admin/members');
   
       return { success: "Member deleted successfully" };

@@ -40,6 +40,7 @@ export async function createEvent(formData: FormData) {
         });
 
         revalidatePath('/admin/events');
+        revalidatePath("/events");
         return { success: "Event added!" };
 
         
@@ -69,6 +70,7 @@ export async function deleteEvent(eventId: string) {
         await prisma.event.delete({ where: { id: eventId } });
 
         revalidatePath('/admin/events');
+        revalidatePath("/events");
         return { success: "Event deleted!" };
         
     } catch (error) {
