@@ -66,7 +66,7 @@ const Section_3 = () => {
 
   if (loading) return <div>Loading...</div>;
 
-  const { pastEvents, upcomingEvents, latestPastEvent } = filterEvents(events);
+  const {upcomingEvents, latestPastEvent } = filterEvents(events);
   const carouselEvents = events.slice(0, 6);
 
 

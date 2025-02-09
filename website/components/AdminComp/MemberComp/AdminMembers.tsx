@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { deleteMember, getAllMembers } from "@/app/actions/Members";
+import { getAllMembers } from "@/app/actions/Members";
 import {
   Table,
   TableBody,
@@ -14,7 +14,6 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { member } from "@prisma/client";
@@ -22,8 +21,6 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";

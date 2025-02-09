@@ -1,12 +1,11 @@
 'use client';
-import { EventData, EventDataSchem } from '@/lib/data'
 import React from 'react'
 import Image from 'next/image'
 import { CalendarDays, MapPin, Clock } from 'lucide-react'
 import { useIsMobile } from '@/lib/hooks'
 import { Event } from '@prisma/client';
 
-const section_2 = ({EventData} : {EventData : Event[]}) => {
+const Section_2 = ({EventData} : {EventData : Event[]}) => {
 
   const isMobile = useIsMobile();
 
@@ -22,11 +21,11 @@ const section_2 = ({EventData} : {EventData : Event[]}) => {
   )
 }
 
-export default section_2
+export default Section_2
 
 
 
-const EventCard = ({ event, isMobile }: { event: Event; isMobile: boolean }) => {
+const EventCard = ({ event }: { event: Event; isMobile: boolean }) => {
   return (
     <div className="overflow-hidden grid grid-cols-1 md:grid-cols-3 gap-10">
   {/* First Column (Image) */}

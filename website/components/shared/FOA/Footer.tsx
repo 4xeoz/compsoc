@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { FaInstagram, FaDiscord, FaTiktok, FaTwitch } from 'react-icons/fa'
-import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
 const currentYear = new Date().getFullYear()
@@ -38,7 +37,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium">Spotted a typo?</h4>
-                <p className="text-sm text-muted-foreground">We're on GitHub, reach out to us</p>
+                <p className="text-sm text-muted-foreground">We&apos;re on GitHub, reach out to us</p>
               </div>
               <div>
                 <h4 className="font-medium">Found a major issue?</h4>

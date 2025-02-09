@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from 'next/navigation';
-import { FaHome, FaCalendarAlt, FaUsers, FaTachometerAlt, FaPlusCircle } from 'react-icons/fa';
+import { FaHome, FaCalendarAlt, FaTachometerAlt, FaPlusCircle } from 'react-icons/fa';
 import {
   Sidebar,
   SidebarContent,
@@ -16,7 +16,6 @@ import {
 import Image from "next/image";
 import Logo from "../headerComp/Logo";
 import { Session } from "next-auth";
-import { main } from '@/prisma/seed';
 
 const items = [
   {
@@ -69,7 +68,6 @@ export function AppSidebar({ session }: { session: Session }) {
                 );
               })}
             </SidebarMenu>
-            {/* <button onClick={async () => {await main}} className="bg-foreground text-background p-2 rounded-md mt-5">Seed</button> */}
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>

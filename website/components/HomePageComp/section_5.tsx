@@ -28,7 +28,7 @@ const Section5 = () => {
     return (
         <div className='p-5'>
             <div className='my-4'>
-                <h2>FAQ's</h2>
+                <h2>FAQs</h2>
             </div>
             <div>
                 <Accordion type="single" collapsible className="w-full flex flex-col gap-4">

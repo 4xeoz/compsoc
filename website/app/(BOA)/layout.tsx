@@ -1,6 +1,6 @@
 import React from "react";
 import "../globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider} from "@/components/ui/sidebar";
 import  AppSidebar from "@/components/shared/BOA/AppSidebar";
 import { auth } from "@/auth";
 import { Role } from "@prisma/client";

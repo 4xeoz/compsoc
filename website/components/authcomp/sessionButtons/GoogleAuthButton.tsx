@@ -1,8 +1,6 @@
 "use client";
 
 import { signIn, signOut } from "next-auth/react";
-import { FaSignOutAlt } from 'react-icons/fa';
-import { FaGoogle } from 'react-icons/fa';
 import NavLink from "../../shared/headerComp/NavLink";
 
 

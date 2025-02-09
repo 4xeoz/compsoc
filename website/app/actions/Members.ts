@@ -75,6 +75,7 @@ export async function deleteMember(memberId: string) {
   
       return { success: "Member deleted successfully" };
     } catch (error) {
+      console.error("Error deleting member:", error);
       return { error: "Internal server error" };
     }
   }

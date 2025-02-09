@@ -1,6 +1,6 @@
 import React from 'react';
-import Section2 from '@/components/EvnetPageComp/section_2';
-import Section3 from '@/components/EvnetPageComp/section_3';
+import Section_2 from '@/components/EventPageComp/section_2';
+import Section_3 from '@/components/EventPageComp/section_3';
 import { getAllEvents } from '../actions/Event';
 
 const EventsPage = async () => {
@@ -14,8 +14,8 @@ const EventsPage = async () => {
 
   return (
     <div className="max-w-5xl mx-auto flex-col flex gap-32 p-5">
-      <Section2 EventData={upcomingEvents} />
-      <Section3 EventData={previousEvents} />
+      <Section_2 EventData={upcomingEvents} />
+      <Section_3 EventData={previousEvents} />
     </div>
   );
 };

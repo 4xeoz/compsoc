@@ -5,7 +5,7 @@ import React from 'react'
 
 interface RoleGateProps {
     children : React.ReactNode,
-    AllowedRole : String
+    AllowedRole : string
 }
 
 const RoleGate = async ({children, AllowedRole} : RoleGateProps) => {
