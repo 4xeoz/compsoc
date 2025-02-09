@@ -1,4 +1,4 @@
-import AdminEvent from '@/components/AdminPageComp/AdminEventComp/AdminEvent'
+import AdminEvent from '@/components/AdminComp/EventComp/AdminEvent'
 import React from 'react'
 
 const AdminEventPage = () => {

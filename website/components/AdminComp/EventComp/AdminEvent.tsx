@@ -27,6 +27,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import DeleteButton from "./DeleteButton";
+import EventCreateForm from "./EventCreateFrom";
 
 const AdminEvent = async () => {
   const Data = await getAllEvents();
@@ -43,11 +45,9 @@ const AdminEvent = async () => {
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Are you absolutely sure?</DialogTitle>
-              <DialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </DialogDescription>
+              <DialogTitle>
+                <EventCreateForm />
+              </DialogTitle>
             </DialogHeader>
           </DialogContent>
         </Dialog>
@@ -98,8 +98,9 @@ function EventCard({ EventData }: { EventData: Event[] }) {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                  <DropdownMenuItem>Edit</DropdownMenuItem>
-                  <DropdownMenuItem>Delete</DropdownMenuItem>
+                  <DropdownMenuItem>
+                      <DeleteButton eventid={e.id} />
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>

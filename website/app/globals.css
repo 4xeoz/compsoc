@@ -53,50 +53,67 @@ hr {
 
 @layer base {
   :root {
+    /* Base */
     --background: #100431;
     --foreground: #e8e3ec;
-    --card: #2e1960;
+    
+    /* Cards and popovers (now dark) */
+    --card: #2e1960; /* stays, as it already has a purple‐inflected tone */
     --card-foreground: #e8e3ec;
-    --popover: #ffffff;
-    --popover-foreground: #1a1a1a;
-    --secondary-foreground: #c9bed2;
-    --muted: #f2f2f2;
-    --muted-foreground: #bfb1ca;
-    --accent: #f2f2f2;
-    --accent-foreground: #1a1a1a;
+    --popover: #1a1a2e; /* changed from white to a dark slate */
+    --popover-foreground: #e8e3ec;
+    
+    /* Secondary text remains a soft, complementary purple */
+    --secondary-foreground: #442b59;
+    
+    /* “Muted” backgrounds for disabled or low-emphasis areas now use darker shades */
+    --muted: #2a2a40;
+    --muted-foreground: #a3a3b9;
+    
+    /* Accent: Instead of the original light accent (#f2f2f2), we choose a bright blue that stands out */
+    --accent: #3B82F6;
+    --accent-foreground: #e8e3ec;
+    
+    /* Destructive actions remain as a standout red */
     --destructive: #e60000;
     --destructive-foreground: #fafafa;
-    --border: #412e75;
-    --input: #e6e6e6;
-    --ring: #1a1a1a;
+    
+    /* Borders: Adjusted to a tone that is visible on the dark background */
+    --border: #3a2b59;
+    
+    /* Input backgrounds: darkened to fit the theme */
+    --input: #2a2a40;
+    
+    /* Ring/focus: Using the converted bright blue */
+    --ring: #3B82F6;
+    
+    /* Chart colors – these can be kept as is or tweaked; here we leave them for visual variety */
     --chart-1: #ff5733;
     --chart-2: #2bb673;
     --chart-3: #4c8cbb;
     --chart-4: #6bcf42;
     --chart-5: #ffb733;
+    
+    /* Radius remains the same */
     --radius: 0.5rem;
+    
+    /* Gradients: We retain the original values as they fit a moody purple-blue vibe */
     --Gradient-1: #61307C;
     --Gradient-2: #222F66;
-    --sidebar-background: #2e1960;
-    --sidebar-foreground: #e8e3ec;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: #48367a;
-    --sidebar-ring: 217.2 91.2% 59.8%;
     
+    /* Sidebar: In keeping with the dark theme, we update the HSL-based values (converted to hex) */
+    --sidebar-background: #2e1960; /* same as card */
+    --sidebar-foreground: #e8e3ec;
+    --sidebar-primary: #18181B;  /* from hsl(240, 5.9%, 10%) */
+    --sidebar-primary-foreground: #FAFAFA;  /* from hsl(0, 0%, 98%) */
+    /* Instead of using the near‑white conversion from hsl(240,4.8%,95.9%), we now choose an accent that fits our dark scheme */
+    --sidebar-accent: #3B82F6;  
+    /* For sidebar accent foreground, we use the light foreground for contrast */
+    --sidebar-accent-foreground: #e8e3ec;
+    --sidebar-border: #48367a;
+    --sidebar-ring: #3B82F6;  /* from hsl(217.2, 91.2%, 59.8%) */
   }
-  .dark {
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%; 
-  }
+  
 
 }
 

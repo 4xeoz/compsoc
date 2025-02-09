@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { getAllMembers } from "@/app/actions/Members";
+import { deleteMember, getAllMembers } from "@/app/actions/Members";
 import {
   Table,
   TableBody,
@@ -27,6 +27,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import MemberCreateFrom from "./MemberCreateFrom";
+import DeleteButton from "./DeleteButton";
 
 const AdminEvent = async () => {
   const Data = await getAllMembers();
@@ -37,18 +39,15 @@ const AdminEvent = async () => {
         <h2>Members</h2>
         <Dialog>
           <DialogTrigger>
-            <Button asChild variant="default">
+            <Button asChild variant="secondary">
               <p>Add Member</p>
             </Button>
           </DialogTrigger>
           <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Are you absolutely sure?</DialogTitle>
-              <DialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </DialogDescription>
-            </DialogHeader>
+            <DialogTitle>
+              <MemberCreateFrom />
+            </DialogTitle>
+                
           </DialogContent>
         </Dialog>
       </div>
@@ -96,13 +95,14 @@ function MemeberTable({ memberData }: { memberData: member[] }) {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                  <DropdownMenuItem>Edit</DropdownMenuItem>
-                  <DropdownMenuItem>Delete</DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <DeleteButton memberid={member.id} />
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
           </TableRow>
-        ))}
+        ))} 
       </TableBody>
     </Table>
   );

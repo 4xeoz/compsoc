@@ -1,5 +1,5 @@
 import React from 'react'
-import AdminMembersPage from '@/components/AdminPageComp/AdminEventComp/AdminMembers'
+import AdminMembersPage from '@/components/AdminComp/MemberComp/AdminMembers'
 
 const page = () => {
   return (
